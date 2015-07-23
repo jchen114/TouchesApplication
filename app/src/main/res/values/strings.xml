@@ -1,0 +1,19 @@
+<resources>
+
+    <string name="app_name">TouchesApplication</string>
+
+    <string name="start_horizontal_scroll_activity">Start Horizontal Scroll Activity</string>
+    <string name="start_vertical_scroll_activity">Start Vertical Scroll Activity</string>
+    <string name="start_popup_activity">Start Popup Activity</string>
+    <string name="start_reading_activity">Start Reading Activity</string>
+    <string name="start_finding_activity">Start Finding Activity</string>
+
+    <string name="title_activity_touch_base">TouchBaseActivity</string>
+    <string name="title_activity_horizontal_scroll">HorizontalScrollActivity</string>
+    <string name="title_activity_vertical_scroll">VerticalScrollActivity</string>
+    <string name="title_activity_popup">PopupActivity</string>
+    <string name="title_activity_find">FindingActivity</string>
+    <string name="title_activity_read">ReadingActivity</string>
+    <string name="action_settings">Settings</string>
+
+</resources>
