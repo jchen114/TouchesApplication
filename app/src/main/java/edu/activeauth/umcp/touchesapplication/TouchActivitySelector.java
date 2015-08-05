@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import edu.activeauth.umcp.touchesapplication.FindingPackage.FindingActivity;
+import edu.activeauth.umcp.touchesapplication.PdfPackage.PDFReaderActivity;
 import edu.activeauth.umcp.touchesapplication.PopupPackage.PopupActivity;
 import edu.activeauth.umcp.touchesapplication.ScrollPackage.HorizontalScrollActivity;
 import edu.activeauth.umcp.touchesapplication.ScrollPackage.VerticalScrollActivity;
@@ -63,6 +64,9 @@ public class TouchActivitySelector extends Activity implements View.OnClickListe
                 Intent findingIntent = new Intent(this, FindingActivity.class);
                 startActivity(findingIntent);
                 break;
+            case R.id.reading_activity_button:
+                Intent readingIntent = new Intent(this, PDFReaderActivity.class);
+                startActivity(readingIntent);
         }
     }
 

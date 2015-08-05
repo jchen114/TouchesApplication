@@ -1,5 +1,6 @@
 package edu.activeauth.umcp.touchesapplication.PdfPackage;
 
+import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
@@ -12,24 +13,26 @@ import edu.activeauth.umcp.touchesapplication.TouchBaseActivity;
  */
 public class PDFReaderActivity extends TouchBaseActivity {
 
-    private WebView mPDFWebView;
+    WebView mReadingWebView;
     private static String mLogTag = "PDFReaderActivity";
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
 
     @Override
     protected void onStart() {
         super.onStart();
         Log.d(mLogTag, "On Start");
-        View view = getLayoutInflater().inflate(R.layout.waldo_web_view, null);
-        mPDFWebView = (WebView) view.findViewById(R.id.waldo_web_view);
-        mPDFWebView.getSettings().setBuiltInZoomControls(true);
-        mPDFWebView.getSettings().setDisplayZoomControls(false);
-        mPDFWebView.getSettings().setJavaScriptEnabled(true);
-        String pdf = "http://www.adobe.com/devnet/acrobat/pdfs/pdf_open_parameters.pdf";
-        mPDFWebView.loadUrl("http://docs.google.com/gview?embedded=true&url=" + pdf);
-        mPDFWebView.setOnTouchListener(this);
-        mRelativeLayout.addView(mPDFWebView);
+        View view = getLayoutInflater().inflate(R.layout.reading_web_view, null);
+        mReadingWebView = (WebView) view.findViewById(R.id.reading_web_view);
+        mReadingWebView.loadUrl("file:///android_asset/article.html");
+        mReadingWebView.getSettings().setBuiltInZoomControls(true);
+        mReadingWebView.getSettings().setDisplayZoomControls(false);
+        mReadingWebView.setOnTouchListener(this);
+        mRelativeLayout.addView(mReadingWebView);
     }
-
 
 
 }

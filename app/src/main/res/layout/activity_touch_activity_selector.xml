@@ -43,6 +43,15 @@
         android:layout_gravity="center_horizontal"
         android:onClick="onClick" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/start_reading_activity"
+        android:id="@+id/reading_activity_button"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onClick" />
+
 </LinearLayout>
 
 
